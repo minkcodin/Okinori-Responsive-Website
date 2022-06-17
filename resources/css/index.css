@@ -169,6 +169,10 @@ nav.navigation-menu {
         height: 3vh;
     }
 
+    promo > h1 {
+        font-size: .65rem;
+    }
+
     nav.navigation-menu {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
