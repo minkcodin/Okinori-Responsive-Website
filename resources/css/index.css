@@ -73,13 +73,15 @@ nav.navigation-menu {
     border: inherit;
 }
 
-.navigation-menu > .logo > img {
+.logo > img {
     width: 11.875rem;
     height: 100%;
 }
 
 .navigation-menu > .main-navigation {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     height: inherit;
     border: inherit;
     justify-content: space-around;
@@ -87,12 +89,24 @@ nav.navigation-menu {
     align-items: center;
 }
 
+.navigation-menu .icon {
+    width: 1rem;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.main-navigation a {
+    align-self: center;
+}
+
 .navigation-menu > .main-navigation > img {
     padding-right: .5rem;
 }
 
-.navigation-menu > .main-navigation a {
+.main-navigation a {
     display: flex;
+    justify-content: center;
     text-transform: uppercase;
     font-weight: 900;
     line-height: 1.5rem;
@@ -103,7 +117,7 @@ nav.navigation-menu {
     border: inherit;
 }
 
-.navigation-menu > .login, .navigation-menu > .login > a {
+.navigation-menu > .login, .login > a, .login .icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,14 +125,14 @@ nav.navigation-menu {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 900;
-    gap: .25rem
+    gap: .5rem
 }
 
 .navigation-menu > .cart {
     border: inherit;
 }
 
-.navigation-menu > .cart, .navigation-menu > .cart > a {
+.navigation-menu > .cart, .cart > a, .cart .icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,7 +140,7 @@ nav.navigation-menu {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 900;
-    gap: .25rem
+    gap: .5rem
 }
 
 @media screen and (min-width: 768px) and (max-width: 1600px) {
@@ -143,6 +157,10 @@ nav.navigation-menu {
     img.icon {
         width: 1.5rem;
         height: 100%;
+    }
+
+    .login .icon, .cart .icon {
+        width: 1.5rem;
     }
 }
 
@@ -161,6 +179,8 @@ nav.navigation-menu {
     .navigation-menu > .logo {
         display: grid; 
         grid-column: 1 / span 7;
+        justify-content: start;
+        padding-left: 1rem;
     }
 
     label {
@@ -169,25 +189,47 @@ nav.navigation-menu {
         width: 100%;
         height: 100%;
         border: inherit;
-    }
-
-    label > img {
-        width: 1.5rem;
-        height: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     .navigation-menu > .main-navigation {
         display: grid;
         grid-column: 1 / span 8;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 0;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .main-navigation > li {
+        display: grid;
+        width: 100%;
+        height: inherit;
+        box-sizing: content-box;
+        border: inherit;
     }
 
     .navigation-menu > .login {
         display: grid;
         grid-column: 1 / span 4;
+        justify-content: center;
+        align-content: center;
     }
 
     .navigation-menu > .cart {
         display: grid;
         grid-column: 5 / span 4;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .login .icon , .cart .icon {
+        width: 2rem;
+    } 
+
+    #menu-toggle:checked ~ .main-navigation, #menu-toggle:checked ~ .login, #menu-toggle:checked ~ .cart {
+        display: none;
     }
 }
