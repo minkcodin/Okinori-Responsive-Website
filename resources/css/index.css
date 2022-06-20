@@ -290,5 +290,5 @@ nav.navigation-menu {
     width: 50%;
     height: 85vh;
     align-items: flex-start;
-    background-image: url('resources/img/hero-img.png');
+    background-image: url(../img/hero-img.png);
 }
