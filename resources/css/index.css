@@ -285,10 +285,10 @@ nav.navigation-menu {
     line-height: 1.75rem;
 }
 
-.hero-img {
-    display: flex;
+#hero-img {
+    display: inline-block;
     width: 50%;
     height: 85vh;
     align-items: flex-start;
-    background: url(resources/img/hero-img.png) no-repeat center cover ;
+    background-image: url('resources/img/hero-img.png');
 }
