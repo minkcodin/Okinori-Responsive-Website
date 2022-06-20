@@ -8,8 +8,10 @@
 }
 
 html {
+    font-size: 16px;
     border-collapse: collapse;
     background-color: #FAF8F3;
+    color: #433633;
 }
 
 a, a:visited, a:hover {
@@ -23,7 +25,7 @@ ul li {
 
 @media screen and (min-width: 768px) and (max-width: 1600px) {
     html {
-      font-size: 12px;
+      font-size: 14px;
     }
 }
 
@@ -52,6 +54,7 @@ promo h1 {
 
 
 /* Navigation */
+
 #menu-toggle, label {
     display: none;
 }
@@ -176,7 +179,8 @@ nav.navigation-menu {
     nav.navigation-menu {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-        grid-template-rows: 7vh 60vh 30vh;
+        /* grid-template-rows: 7vh 60vh 30vh; */
+        grid-auto-rows: 7vh 60vh 30vh;
         height: 100%;
     }
 
@@ -236,4 +240,55 @@ nav.navigation-menu {
     #menu-toggle:checked ~ .main-navigation, #menu-toggle:checked ~ .login, #menu-toggle:checked ~ .cart {
         display: none;
     }
+}
+
+/* Main */
+
+.container {
+    width: 100%;
+    display: flex;
+}
+
+.text-container {
+    width: 50%;
+    height: 85vh;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.text-container {
+    width: 50%;
+    align-items: flex-start;
+}
+
+
+.intro h1 {
+    font-size: 2.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.intro h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    color: #48A9A6;
+}
+
+.description {
+    width: 37.5rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+.hero-img {
+    display: flex;
+    width: 50%;
+    height: 85vh;
+    align-items: flex-start;
+    background: url(resources/img/hero-img.png) no-repeat center cover ;
 }
