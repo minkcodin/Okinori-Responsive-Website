@@ -160,6 +160,10 @@ nav.navigation-menu {
     gap: .5rem
 }
 
+.login.login-cart, .cart.login-cart {
+    border-bottom: 2px solid #433633;
+}
+
 .login-cart {
     background-color: #FAF8F3;
     transition: background-color .2s ease;
