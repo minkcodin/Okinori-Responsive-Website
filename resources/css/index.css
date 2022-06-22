@@ -428,7 +428,7 @@ nav.navigation-menu {
 .item-holder {
     display: flex;
     flex-direction: column;
-    height: 66vh;
+    height: 36vw;
     border: 1px solid #433633;
     background-color: #FAF8F3;
     color: #433633;
@@ -467,7 +467,7 @@ nav.navigation-menu {
 
 @media screen and (min-width: 1024px) and (max-width: 1600px) {
     .item-holder {
-        height: 66vh;
+        height: 37vw;
     }
 }
 
@@ -477,7 +477,7 @@ nav.navigation-menu {
     }
 
     .item-holder {
-        height: 51vh;
+        height: 72vw;
     }
 }
 
