@@ -12,11 +12,13 @@ html {
     border-collapse: collapse;
     background-color: #FAF8F3;
     color: #433633;
+    cursor: url(../img/icon-small.svg), auto;
 }
 
 a, a:visited, a:hover {
     text-decoration: none;
     color: unset;
+    cursor: url(../img/icon-small.svg), auto;
 }
 
 ul li {
@@ -232,7 +234,6 @@ nav.navigation-menu {
     }
 
     label {
-        cursor: pointer;
         display: flex;
         width: 100%;
         height: 100%;
@@ -372,7 +373,6 @@ nav.navigation-menu {
 }
 
 .menu-item {
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
     width: 25%;
