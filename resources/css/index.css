@@ -496,3 +496,16 @@ nav.navigation-menu {
         height: 140vw;
     }
 }
+
+/* Collections */
+
+#collections {
+    position: relative;
+    width: 100%;
+    padding-top: 42.96875%;
+    background: url(/resources/img/img-items/collection-cover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
