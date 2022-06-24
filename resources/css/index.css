@@ -487,13 +487,13 @@ nav.navigation-menu {
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 768px) and (orientation: portrait){
+@media screen and (max-width: 768px) and (orientation: portrait){
     #showcase {
         grid-template-columns: repeat(1, 100%);
     }
 
     .item-holder {
-        height: 150vw;
+        height:calc(5rem + 85vh);
     }
 }
 
