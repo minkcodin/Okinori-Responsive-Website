@@ -15,6 +15,24 @@ html {
     cursor: url(../img/icon-small.svg), auto;
 }
 
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+    ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb {
+    background: #433633; 
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+    background: #1B100E; 
+}
+
 a, a:visited, a:hover {
     text-decoration: none;
     color: unset;
@@ -512,6 +530,7 @@ nav.navigation-menu {
 #collections {
     position: relative;
     width: 100%;
+    height: auto;
     padding-top: 42.96875%;
     background: url(../img/img-items/collection-cover.png);
     background-position: center;
@@ -519,3 +538,117 @@ nav.navigation-menu {
     background-size: cover;
 }
 
+.collection-description {
+    position: absolute;
+    width: 35%;
+    height: auto;
+    left: 0px;
+    bottom: 1.625rem;
+    background: rgba(67, 54, 51, 0.75);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+    padding: 2.875rem 4.5rem;
+    color: #FAF8F3;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+}
+
+.clip-text {
+    background: url(../img/img-items/text-mask.png);
+    background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+}
+
+.collection-description h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.collection-description h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.563rem;
+    text-transform: uppercase;
+}
+
+.collection-description p {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: rgba(250, 248, 243, 0.5);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .collection-description {
+        bottom: 0rem;
+        width: 50%;
+        height: auto;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #collections {
+        position: relative;
+        width: auto;
+        height:calc(3rem + 75vh);
+    }
+
+    .collection-description {
+        bottom: 0rem;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    #collections {
+        position: relative;
+        width: auto;
+        height:calc(3rem + 75vh);
+    }
+
+    .collection-description {
+        width: 100%;
+        height: auto;
+        bottom: 0;
+    }
+}
+
+
+.other-collection-container {
+    display: grid;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "collection-1 collection-2 collection-3"
+        "all-collection all-collection all-collection";
+}
+
+.collection-1 {
+    grid-area: collection-1;
+}
+
+.collection-2 {
+    grid-area: collection-2;
+}
+
+.collection-3 {
+    grid-area: collection-3;
+}
+
+.all-collection {
+    grid-area: all-collection;
+}
