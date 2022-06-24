@@ -448,6 +448,8 @@ nav.navigation-menu {
 }
 
 .item-holder img {
+    width: auto;
+    height: auto;
     padding: 1.5rem;
     transition: padding .2s ease;
 }
@@ -493,7 +495,14 @@ nav.navigation-menu {
     }
 
     .item-holder {
-        height:calc(5rem + 85vh);
+        width: auto;
+        /* height:calc(3rem + 75vh); */
+        height: auto;
+    }
+
+    .item-holder img {
+        width: auto;
+        height: 100%;
     }
 }
 
