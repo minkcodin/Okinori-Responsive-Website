@@ -779,16 +779,22 @@ nav.navigation-menu {
 .collection-1 > h1, .collection-2 > h1, .collection-3 > h1 {
     align-self: center;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 44px;
+    font-size: 2rem;
+    line-height: 2.75rem;
     text-transform: uppercase;  
+}
+
+@media screen and (max-width: 1600) {
+    .collection-1 > h1, .collection-2 > h1, .collection-3 > h1 {
+        font-size: 1.5rem;
+    }
 }
 
 .collection-1 > h2, .collection-2 > h2, .collection-3 > h2 {
     align-self: center;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     text-transform: uppercase;
 }
 
@@ -826,7 +832,7 @@ nav.navigation-menu {
     font-style: normal;
     font-weight: 700;
     font-size: 1.125rem;
-    line-height: 25px;
+    line-height: 1.625rem;
 }
 
 #footer-nav > ul > li:hover {
@@ -843,8 +849,8 @@ nav.navigation-menu {
     justify-content: center;
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     text-transform: uppercase;
 }
 
